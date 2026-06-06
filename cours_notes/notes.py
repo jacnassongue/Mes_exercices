@@ -119,4 +119,3 @@ elif age == 6:
 else:
     print("vous êtes mineur")
 
-
