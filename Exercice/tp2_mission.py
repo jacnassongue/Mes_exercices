@@ -69,13 +69,13 @@
 # print("Temps de traitement de tous les lots en minutes:", nobre_minute, "minutes")
 
 # exercice_5
-# mission = "SENTINEL-TG"
-# date = "30/05/2026"
-# zone = "Côte d'Ivoire"
-# altitude = 830 
-# capteur = 5
-# Rapport = "la mission s'est déroulée sous le nom de " + mission + " le "  +  date  +  " en "  +  zone  +  " d'une altitude de "  +  str(altitude) + " avec "  + str(capteur) + " capteurs."
-# print("Rapport de mission:", Rapport)
+mission = "SENTINEL-TG"
+date = "30/05/2026"
+zone = "Côte d'Ivoire"
+altitude = 830 
+capteur = 5
+Rapport = "la mission s'est déroulée sous le nom de " + mission + " le "  +  date  +  " en "  +  zone  +  " d'une altitude de "  +  str(altitude) + " avec "  + str(capteur) + " capteurs."
+print("Rapport de mission:", Rapport)
 
 # exercice_6
 message = """
@@ -90,3 +90,16 @@ Missions actives: 3
 print(message)
 
 # exercice_7
+latitude_recue = "7.6412" 
+longitude_recue = "-8.4078" 
+distance_capteur_km = "285"
+angle_degres = "45"
+# Conversion
+latitude = float(latitude_recue)
+longitude = float(longitude_recue)
+distance = int(distance_capteur_km)
+anglee = int(angle_degres)
+# distance en m
+dist_mètre = distance*1000
+# taux de couverture
+taux = (distance/1000)*100
