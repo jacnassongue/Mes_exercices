@@ -103,3 +103,32 @@ anglee = int(angle_degres)
 dist_mètre = distance*1000
 # taux de couverture
 taux = (distance/1000)*100
+# exercice 8
+temperature_str = "28.5" 
+humidite_str = "75"
+pression_str = "1013.25" 
+nb_mesures_str = "450"
+# Conversion
+temperature = float(temperature_str)
+humidite = int(humidite_str)
+pression = float(pression_str)
+nbre_mesure = int(nb_mesures_str)
+# cal cul de la moyenne
+moyenne_temp_humidite = (humidite + temperature)/2
+# mesure complete
+mesures_complete = temperature + humidite + pression
+
+# SERIE_OPERATIONS ET GESTION DE DONNEES
+# exercice 9
+tension_nominale = 24  
+courant_max = 18.5  
+rendement_panneau = "85"  
+heures_ensoleillement = "8.5" 
+rende = int(rendement_panneau)
+heure = float(heures_ensoleillement)
+# puissance nominale
+pn = tension_nominale * courant_max
+e_produite = pn * heure
+
+
+
