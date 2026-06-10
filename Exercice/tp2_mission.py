@@ -69,13 +69,13 @@
 # print("Temps de traitement de tous les lots en minutes:", nobre_minute, "minutes")
 
 # exercice_5
-# mission = "SENTINEL-TG"
-# date = "30/05/2026"
-# zone = "Côte d'Ivoire"
-# altitude = 830 
-# capteur = 5
-# Rapport = "la mission s'est déroulée sous le nom de " + mission + " le "  +  date  +  " en "  +  zone  +  " d'une altitude de "  +  str(altitude) + " avec "  + str(capteur) + " capteurs."
-# print("Rapport de mission:", Rapport)
+mission = "SENTINEL-TG"
+date = "30/05/2026"
+zone = "Côte d'Ivoire"
+altitude = 830 
+capteur = 5
+Rapport = "la mission s'est déroulée sous le nom de " + mission + " le "  +  date  +  " en "  +  zone  +  " d'une altitude de "  +  str(altitude) + " avec "  + str(capteur) + " capteurs."
+print("Rapport de mission:", Rapport)
 
 # exercice_6
 message = """
@@ -90,3 +90,45 @@ Missions actives: 3
 print(message)
 
 # exercice_7
+latitude_recue = "7.6412" 
+longitude_recue = "-8.4078" 
+distance_capteur_km = "285"
+angle_degres = "45"
+# Conversion
+latitude = float(latitude_recue)
+longitude = float(longitude_recue)
+distance = int(distance_capteur_km)
+anglee = int(angle_degres)
+# distance en m
+dist_mètre = distance*1000
+# taux de couverture
+taux = (distance/1000)*100
+# exercice 8
+temperature_str = "28.5" 
+humidite_str = "75"
+pression_str = "1013.25" 
+nb_mesures_str = "450"
+# Conversion
+temperature = float(temperature_str)
+humidite = int(humidite_str)
+pression = float(pression_str)
+nbre_mesure = int(nb_mesures_str)
+# cal cul de la moyenne
+moyenne_temp_humidite = (humidite + temperature)/2
+# mesure complete
+mesures_complete = temperature + humidite + pression
+
+# SERIE_OPERATIONS ET GESTION DE DONNEES
+# exercice 9
+tension_nominale = 24  
+courant_max = 18.5  
+rendement_panneau = "85"  
+heures_ensoleillement = "8.5" 
+rende = int(rendement_panneau)
+heure = float(heures_ensoleillement)
+# puissance nominale
+pn = tension_nominale * courant_max
+e_produite = pn * heure
+
+
+
