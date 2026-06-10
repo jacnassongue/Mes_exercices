@@ -86,5 +86,5 @@ proprietaire = 'Kofi'
 surface = 400
 actes_complets = True 
 delai_expire = True
-expression = ((proprietaire in ['Kofi', 'Amina', 'coco']) and (surface > 250)) or ((actes_complets == False) and (delai_expire == True))
-
+expression_1 = ((proprietaire in ['Kofi', 'Amina', 'coco']) and (surface > 250)) or ((actes_complets == False) and (delai_expire == True))
+print(expression_1)
