@@ -17,13 +17,31 @@ communes = ["Golfe 1", "Agoè-Nyivé 1", "Golfe 1", "Bas-Mono 1", "Agoè-Nyivé 
 # for i, parcelle in enumerate(parcelles, start=1):
 #     print(f"{i}, {parcelle}-{surfaces[i-1]} m²")
 # Question 1.3- Repérer les grandes parcelles
-# for i, (parcelle, surface) in enumerate(zip(parcelles, surfaces)): #zip qui permet d'aasocier chaque élément de parcelle à chaque élément de surface
-#     if surface > 500 :
-#         print(f"{parcelle} - {surface} m²")
+for i, (parcelle, surface) in enumerate(zip(parcelles, surfaces)): #zip qui permet d'aasocier chaque élément de parcelle à chaque élément de surface
+    if surface > 500 :
+        print(f"{parcelle} - {surface} m²")
 #Question 1.4: le bilan des surfaces
 # 1. La surface total
 surfaces_total = sum(surfaces)
 print(f"la surface totale est : {surfaces_total}")
 # Le nombre de parcelles situées dans Golfe 1
+nombre_parcelles_golfe_1 = communes.count("Golfe 1")
+print(f"le nombre de parcelles dans la commune Golfe 1 est : {nombre_parcelles_golfe_1}")
+# les étiquettes de classeurs
+for i in range(len(parcelles)):
+    print(f'Etiquette n°{i+1}')
+# Question 1.6-La recherche au guichet (while + break)
+while True:
+    id_parcelle = input("Entrer l'identifiant de votre parcelle :")
+    if id_parcelle in parcelles:
+        print("Parcelle trouvée dans le relevé.")
+    else: 
+        print("Aucune parcelle à cet identifiant.")
+    if id_parcelle == "fin":
+        print("Fermeture du guichet")
+        break
+
+
+    
 
 
