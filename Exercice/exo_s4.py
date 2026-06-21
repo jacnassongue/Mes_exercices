@@ -25,6 +25,5 @@ communes = ["Golfe 1", "Agoè-Nyivé 1", "Golfe 1", "Bas-Mono 1", "Agoè-Nyivé 
 surfaces_total = sum(surfaces)
 print(f"la surface totale est : {surfaces_total}")
 # Le nombre de parcelles situées dans Golfe 1
-c
 
 
