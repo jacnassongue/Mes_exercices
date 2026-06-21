@@ -154,8 +154,8 @@ boutique = [
 #     print(f' 2*{a}= {2*a}')
 # # une méthode de for qui permet de savoir on est à la quellième itération dans la boucle:
 # # enumerate:
-# for numero, nom in enumerate(boutique, start=1):
-#     print(f'{numero}:{nom}')
+for numero, nom in enumerate(boutique, start=1):
+    print(f'{numero}:{nom}')
 # for i in range(2,11):
 #     print(i)
 
@@ -190,7 +190,7 @@ boutique = {
 # on peut ajpouter une nouvelle clé avec sa valeur par la même méthode ci-haut:
 # boutique["numero"] = 900000
 # print(boutique)
-# si o considère que c'est une erreur d'ajouter un numéro et qu'on veut l'enlever;
+# si on considère que c'est une erreur d'ajouter un numéro et qu'on veut l'enlever;
 # boutique.pop("numero")
 # del boutique["numéro"]
 # On peut tout simplement récupérer les clés ou juste les valeurs
