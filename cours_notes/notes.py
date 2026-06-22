@@ -154,8 +154,8 @@ boutique = [
 #     print(f' 2*{a}= {2*a}')
 # # une méthode de for qui permet de savoir on est à la quellième itération dans la boucle:
 # # enumerate:
-for numero, nom in enumerate(boutique, start=1):
-    print(f'{numero}:{nom}')
+# for numero, nom in enumerate(boutique, start=1):
+#     print(f'{numero}:{nom}')
 # for i in range(2,11):
 #     print(i)
 
@@ -177,12 +177,12 @@ for numero, nom in enumerate(boutique, start=1):
 #     else:
 #         break
 # les dictionnaires: ils s'affichent clé : valeur c'est-)-dire nom: chez mamadou
-boutique = {
-    'nom':"Chez mamadou",
-    "quartier": "Leo 2000",
-    "Ouvert": True,
-    "Nb_produits": 12
-    }
+# boutique = {
+#     'nom':"Chez mamadou",
+#     "quartier": "Leo 2000",
+#     "Ouvert": True,
+#     "Nb_produits": 12
+#     }
 # print(boutique["non"])
 # print(boutique.get('nom', "Aucun nom trouvé"))
 # boutique["nom"] = "Epicerie du matin" # changer la clé dans le dictionnaire
@@ -211,5 +211,63 @@ range(12)
 #     if n%2 ==0:
 #         print(1+n)
 
-annee = 1822
-print(f"Le premier ordinateur fut inventé en {annee}")
+# annee = 1822
+# print(f"Le premier ordinateur fut inventé en {annee}")
+
+# les fonctions
+# def salutation():
+#     print("Bonjour")
+# # On peut l'appeler plus loin
+# salutation()
+# def date():
+#     print("On est aujourd'hui le 21 juin 2026")
+# date()
+# on peut donner un paramètre à la fonction saliutation(): salutation(Abalo)
+# def salutation(prenom):
+#     print(f"Bonjour {prenom}")
+# salutation("Abalo")
+# salutation("Faure Gnassingbé")
+# les fonction permettent aussi de faire des opération grâce au mot return:
+# def somme_age(annee):
+#     age = 2026-annee
+#     return age
+# n_age = somme_age(2006)
+# print(n_age)
+
+# def calculer_total(prix, quantite):
+#     Total = prix*quantite
+#     return Total
+# achat = calculer_total(500,3)
+# print(achat)
+
+# def afficher_menu():
+#     print("""
+#           ====MENU===
+#           1) Voir les agences
+#           2) rechercher
+#           3) Quitter
+#           """)
+# afficher_menu()
+
+# def est_dans_liste(liste, valeur):
+#     # b=False
+#     for val in liste:
+#         if val == valeur:
+#             return True
+#         else:
+#             return False
+    
+# test = ["hey", "test", "hello"]    
+# valeu = input("Entrer une valeur :")
+# recuper = est_dans_liste(boutique, valeu)
+# if recuper  == True:
+#     print(f"La valeur se trouve dans la liste")
+# else:
+#     print("Aucune valeur correspondante dans la liste")
+
+noms = ["Alice", "Bob", "Charlie"]
+scores = [85, 92, 78]
+for i, (nom, score) in enumerate(zip(noms, scores), start=1):
+    print(f"{i}. {nom} a obtenu {score} points")
+
+     
