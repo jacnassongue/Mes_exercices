@@ -50,11 +50,37 @@ dossiers = ["DOS-201","DOS-202", "DOS-203", "DOS-204", "DOS-205"]
 demandeurs = ["Atta Koffi", "Mireille Yao", "Ibrahim Dosso", "Fatou Coulibaly", "Ernest Bah"]
 statuts    = ["approuvé", "en_attente", "rejeté", "en_attente", "approuvé"]
 # # Question2.1
-for i, (dossier, demandeur) in enumerate(zip(dossiers, demandeurs)):
-    print(f'{i+1}. {dossier} - {demandeur}')
-for i, dossier in enumerate(dossiers):
-    print(f"{i+1}. {dossier} - {demandeurs[i]} avec statut : {statuts[i]}")
+# for i, (dossier, demandeur) in enumerate(zip(dossiers, demandeurs)):
+#     print(f'{i+1}. {dossier} - {demandeur}')
+# for i, dossier in enumerate(dossiers):
+    # print(f"{i+1}. {dossier} - {demandeurs[i]} avec statut : {statuts[i]}")
 # liste_2 = [1, 2, 3, 4, 5, 6, 7]
 # liste_3 = ["un", "deux", "trois", "quatre"]
 # for a, b in enumerate(liste_3):
 #     print(f"{liste_2[a]} = {b}")
+# Création d'une fonction pour gérer le suivi des demandes de permis de construire
+# def structurer_donnees(liste_dos, liste_dem, liste_stat):
+dossiers = ["DOS-201", "DOS-202", "DOS-203", "DOS-204", "DOS-205"]
+demandeurs = ["Atta Koffi", "Mireille Yao", "Ibrahim Dosso", "Fatou Coulibaly", "Ernest Bah"]
+statuts = ["approuvé", "en_attente", "rejeté", "en_attente", "approuvé"]
+
+# def afficher_suivi_dossiers(dossiers, demandeurs, statuts):
+#     # zip() combine ici 3 éléments en même temps à chaque tour de boucle
+#     for dos, dem, stat in zip(dossiers, demandeurs, statuts):
+#         print(f"le dossier n°{dos}, demandé par  {dem}  est {stat}")
+# afficher_suivi_dossiers(dossiers, demandeurs, statuts)
+nbre_dos = 0
+# for i, (dossier, attente) in enumerate(zip(dossiers, statuts)):
+#     if attente == "en_attente":
+#         nbre_dos_attente = nbre_dos_attente + 1
+# print(f'le nombre de dossiers en attente est {nbre_dos_attente}')
+for i, (dossier, statu) in enumerate(zip(dossiers, statuts)):
+    if statu == statuts[i]:
+        nbre_dos += 1
+print(f'Dossiers {statu}: {nbre_dos}')
+
+
+
+
+
+
