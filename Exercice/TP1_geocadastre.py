@@ -15,6 +15,18 @@ def  dd_vers_dms(dd):
     m = int(md)
     sd = (md - m) * 60
     return [d, m, round(sd, 2)]
-print(dd_vers_dms(3.87))
-print(dd_vers_dms(11.52))
+# print(dd_vers_dms(3.87))
+# print(dd_vers_dms(11.52))
+
+# Exercice 3 — Validation de Latitude
+def est_latitude_valide(lat):
+    "valide latitude si la coordonnée est comprise entre -90 et 90 inclus."
+    if lat >= -90 and lat <= 90:
+        return True
+    else:
+        return False
+print(est_latitude_valide(3.87))
+print(est_latitude_valide(95.0))
+print(est_latitude_valide(-90.0))
+
 
