@@ -29,4 +29,17 @@ print(est_latitude_valide(3.87))
 print(est_latitude_valide(95.0))
 print(est_latitude_valide(-90.0))
 
+# Exercice 4 — Validation de Longitude
+def  est_longitude_valide(lon):
+    "valide la longueur en retournant True si celle-ci est comprise entre - 180 et 180"
+    if lon >= -180 and lon <= 180:
+        return True
+    else:
+        return False
+# Exercice 5 — Création d’un Point Géographique
+def  creer_point(lat, lon):
+    "vérifie les fonctions est_latitude_valide et est_longitude_valide, au cas contraire, affiche un message d'erreur et retourne None"
+    if est_latitude_valide(lat) == True:
+        
+    if est_longitude_valide(lon)
 
