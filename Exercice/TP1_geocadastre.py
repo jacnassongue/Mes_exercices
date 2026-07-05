@@ -46,11 +46,6 @@ def  creer_point(lat, lon):
         print("Erreur: longitude invalide")
         return None
     else:
-        print(f"{creer_point(lat, lon)}")
+        return
 
-
-       
-
-        
-
-
+# les dictionnaires: 
