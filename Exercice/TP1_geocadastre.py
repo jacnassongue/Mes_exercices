@@ -25,9 +25,9 @@ def est_latitude_valide(lat):
         return True
     else:
         return False
-print(est_latitude_valide(3.87))
-print(est_latitude_valide(95.0))
-print(est_latitude_valide(-90.0))
+# print(est_latitude_valide(3.87))
+# print(est_latitude_valide(95.0))
+# print(est_latitude_valide(-90.0))
 
 # Exercice 4 — Validation de Longitude
 def  est_longitude_valide(lon):
@@ -39,7 +39,18 @@ def  est_longitude_valide(lon):
 # Exercice 5 — Création d’un Point Géographique
 def  creer_point(lat, lon):
     "vérifie les fonctions est_latitude_valide et est_longitude_valide, au cas contraire, affiche un message d'erreur et retourne None"
-    if est_latitude_valide(lat) == True:
+    if not est_latitude_valide(lat):
+        print('Erreur: latitude invalide')
+        return None
+    elif not est_longitude_valide(lon):
+        print("Erreur: longitude invalide")
+        return None
+    else:
+        print(f"{creer_point(lat, lon)}")
+
+
+       
+
         
-    if est_longitude_valide(lon)
+
 
