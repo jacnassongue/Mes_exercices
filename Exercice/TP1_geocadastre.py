@@ -46,6 +46,49 @@ def  creer_point(lat, lon):
         print("Erreur: longitude invalide")
         return None
     else:
-        return
+        return {
+            "lat": lat,
+            "lon": lon
+        }
+# print(creer_point(3.87, 11.52))
+# print(creer_point(95.0, 11.52))
 
-# les dictionnaires: 
+# Exercice 6 — Affichage d’un Point en DMS
+def  afficher_point(point):
+    long =point["lon"]
+    lat = point["lat"]
+    bassine_long = dd_vers_dms(long)
+    bassine_lat = dd_vers_dms(lat)
+    print(f"longitude: {bassine_long[0]}° {bassine_long[1]}' {bassine_long[2]}'' E")
+    print(f"latitude: {bassine_lat[0]}° {bassine_lat[1]}' {bassine_lat[2]}'' N")
+P = {
+    "lat": 6,
+    "lon": 1.25
+}
+P1 = {
+    "lat": 6.66,
+    "lon": 1.65
+}
+# afficher_point(P)
+# Exercice 7 — Distance Approximative entre Deux Points
+def distance_approx(pt1, pt2):
+    dlong = ((pt2.get("lon") - pt1.get("lon"))*111320*0.9659)**2
+    dlat = ((pt2.get("lat") - pt1.get("lat"))*111320)**2
+    return (dlong + dlat)**0.5
+print(distance_approx(P, P1))
+
+# Exercice 8 — Distance en Kilomètres 
+def distance_en_km(pt1, pt2):
+    d = distance_approx(pt1, pt2)/1000
+
+    return distance_approx(pt1, pt2)/1000
+print(distance_en_km(P, P1))
+    # Exercice 9
+seuil_metres = 10
+def sont_proches(pt1, pt2, seuil_metres):
+    if distance_approx <= seuil_metres:
+        return True
+    
+
+
+
