@@ -89,6 +89,7 @@ def sont_proches(pt1, pt2, seuil_metres):
     if distance_approx <= seuil_metres:
         return True
     
+    
 
 
 
