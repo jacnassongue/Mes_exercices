@@ -270,4 +270,8 @@ scores = [85, 92, 78]
 for i, (nom, score) in enumerate(zip(noms, scores), start=1):
     print(f"{i}. {nom} a obtenu {score} points")
 
+
+
+## 
+
      
