@@ -55,4 +55,58 @@ Obj1.Disponible_Agence(7)
 Obj2.Disponible_Agence(3)
 Obj3.Disponible_Agence(11)
 
+# la notion d'héritage de la classe
+class Agence_special(Agence):
+    def __init__(self, nom, coffre, commune, quartier, region, heure_ouverture_matin, heure_fermeture_matin, heure_ouverture_apres_midi, heure_fermeture_apres_midi):
+        super().__init__(nom, commune, quartier, region, heure_ouverture_matin, heure_fermeture_matin, heure_ouverture_apres_midi, heure_fermeture_apres_midi)
+        self.coffre = coffre
+        self.bureau = []
+        self.gardiens = 0
+# les méthodes sont directement héritées.  
+Agence_special1= Agence_special("Division spéciale du Port", 4, "Golfe 1", "Port", "Maritime", 7, 12, 14, 17)
+Agence_special2= Agence_special("BOFIC Agoè-Nyivé", 1, "Agoè-Nyivé 2", "Légbassito", "Maritime", 7, 12, 14, 17)
+Agence_special3= Agence_special("BOFIC Lomé commune", 2, "Golfe 5", "Agbalépédo", "Maritime", 7, 12, 14, 17)
+Agence_special1.ajouter_services("contentieux fiscal")
+Agence_special2.ajouter_services("contentieux fiscal")
+Agence_special3.ajouter_services("contentieux fiscal")
+Agence_special3.ajouter_services("Vignette TVM")
+Agence_special1.afficher()
+Agence_special2.afficher()
+
+# autres méthode interne à python (isinstance)
+# isinstance() permet de vérifier de quelle classe a été implémenté un objet. 
+appartient = isinstance(Agence_special1, Agence)
+if appartient:
+    print("L'Agence_special1 vient de l'Agnece")
+else:
+    print("L'Agence_special1 ne vient pas de l'Agence")
+appartient = isinstance(Agence_special1, Agence_special)
+if appartient:
+    print("L'Agence_special1 vient de l'Agnece_special")
+else:
+    print("L'Agence_special1 ne vient pas de l'Agence_special")
+
+# Un autre utilitaire de isinstance est de faire u  tri conservatoire
+resultats = [Obj1, Agence_special2]
+liste_Agence_special = [a for a in resultats if isinstance(a, Agence_special)]
+print(liste_Agence_special)
+
+# Méthode intelligentes:
+#def _str_
+#def _len_ 
+# def _init_(self, nom_service):
+    #return nom_service in self.services
+# est_service = OB1.est_service("tva")
+# def _contains_(self, nom_service):
+    # return nom_service in self.services
+#OB1 = Agence("Blitta", ["tva", "contentieux"])
+# est_service = "tva" in OB1
+# _iter_ rend un objet itérable
+# def _init_(self, nom_service):
+    #return iter (self.services)
+# for service in OB1:
+    #print(service)
+
+# ORM (Object Relational Mapping)
+
 
